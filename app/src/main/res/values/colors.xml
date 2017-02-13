@@ -4,6 +4,5 @@
     <color name="colorPrimaryDark">#003666</color>
     <color name="colorAccent">#003666</color>
 
-    <color name="imageToggleEnable">#8A000000</color>
     <color name="imageToggleDisable">#003666</color>
 </resources>
