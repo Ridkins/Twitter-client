@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.github.ridkins.rud">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name="com.github.ridkins.rud.GlobalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:resizeableActivity="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="com.github.ridkins.rud.MainActivity"
+            android:theme="@style/MainActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/static_shortcuts" />
+        </activity>
+
+        <activity
+            android:name="com.github.ridkins.rud.ShowTweetActivity"
+            android:label="@string/tweet">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="https" />
+                <data android:host="twitter.com" />
+                <data android:host="mobile.twitter.com" />
+                <data android:pathPattern="/.*/status/.*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="twitter" />
+                <data android:host="status" />
+                <data android:pathPattern="\?id=.*" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.github.ridkins.rud.OAuthActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="twicalico" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.ridkins.rud.SettingsActivity"
+            android:label="@string/action_settings"
+            android:theme="@style/SettingsActivityTheme" />
+    </application>
+
+</manifest>

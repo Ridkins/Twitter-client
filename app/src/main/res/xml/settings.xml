@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/account">
+        <ListPreference
+            android:key="AccountPoint"
+            android:title="@string/account"
+            android:summary="%s"
+            android:dialogTitle="@string/account"/>
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/app_settings">
+        <CheckBoxPreference
+            android:key="showUserImage"
+            android:title="Show user image"
+            android:summary="Enable or disable user image"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

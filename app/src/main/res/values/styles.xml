@@ -1,0 +1,37 @@
+<resources>
+
+    <style name="BaseAppTheme" parent="Theme.AppCompat.DayNight">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="actionBarTheme">@style/AppTheme.AppBarOverlay</item>
+        <item name="popupTheme">@style/AppTheme.PopupOverlay</item>
+
+    </style>
+
+    <style name="BaseTheme" parent="BaseAppTheme"/>
+
+    <style name="AppTheme" parent="BaseTheme"/>
+    <style name="AppTheme.NoActionBar" parent="BaseTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="MainActivityTheme" parent="AppTheme.NoActionBar"/>
+
+    <style name="BaseShowTweetImageActivityTheme" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+
+    <style name="ShowTweetImageActivityTheme" parent="BaseShowTweetImageActivityTheme"/>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="SettingsActivityTheme" parent="AppTheme">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+    </style>
+
+</resources>
